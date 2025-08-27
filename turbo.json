@@ -13,8 +13,12 @@
       "test:watch": {
         "cache": false
       },
-      "test:integration": {},
-      "test:e2e": {},
+      "test:integration": {
+        "cache": false
+      },
+      "test:e2e": {
+        "cache": false
+      },
       "build": {
         "cache": false,
         "outputs": ["dist/**"],
@@ -25,5 +29,3 @@
       }
     }
   }
-
-  

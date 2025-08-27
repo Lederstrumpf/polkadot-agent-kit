@@ -22,6 +22,7 @@
           buildInputs = with pkgs; [
             nodejs
             nodePackages.pnpm
+            typescript
             ollama
           ];
         };
