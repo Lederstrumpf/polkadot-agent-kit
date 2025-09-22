@@ -37,6 +37,13 @@
   "engines": {
     "node": ">=22"
   },
+  "resolutions": {
+    "@polkadot/types-codec": "16.4.6",
+    "@polkadot/api": "16.4.6",
+    "@polkadot/types": "16.4.6",
+    "react-is": "19.0.0",
+    "@crypto-dex-sdk/chain": "0.1.2"
+  },
   "scripts": {
     "compile": "turbo run compile",
     "format:check": "turbo run format:check",
@@ -46,7 +53,8 @@
     "test": "turbo run test",
     "test:cov": "turbo run test:cov",
     "test:watch": "turbo run test:watch",
-    "test:integration": "turbo run test:integration",
+    "test:integration:testnet": "turbo run test:integration:testnet",
+    "test:integration:mainnet": "turbo run test:integration:mainnet",
     "test:e2e": "turbo run test:e2e",
     "clean": "turbo run clean",
     "build": "turbo run build",
@@ -56,12 +64,7 @@
     "build:sdk": "pnpm --filter \"./packages/sdk\" build",
     "build:llm": "pnpm --filter \"./packages/llm\" build",
     "version-packages": "changeset version",
-    "publish-packages": "turbo run build && changeset publish",
-    "papi": "papi generate"
+    "publish-packages": "turbo run build && changeset publish"
   },
-  "packageManager": "pnpm@10.6.5",
-  "dependencies": {
-    "@polkadot-api/descriptors": "file:.papi/descriptors",
-    "polkadot-api": "^1.10.0"
-  }
+  "packageManager": "pnpm@10.6.5"
 }
